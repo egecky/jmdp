@@ -1,0 +1,9 @@
+# Minimal deps for tabular experiments
+numpy
+matplotlib
+
+# Deep experiments (optional)
+torch
+pillow
+gymnasium[atari,accept-rom-license]
+ale-py
