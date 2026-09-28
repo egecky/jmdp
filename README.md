@@ -54,6 +54,26 @@ listed in `requirements.txt`. Install it with:
 python -m pip install -r requirements.txt
 ```
 
+## Quick check
+
+Run the small test of the coupled second-moment operator:
+
+```bash
+python -m unittest discover -s tests
+```
+
+It checks that actions driven by the same one-step randomness have a different
+cross-action return moment than the independent-coupling calculation.
+
+For a small run of all three tabular experiments:
+
+```bash
+OUT=runs/smoke CHAIN_STATES=4 WIDTH=4 HEIGHT=3 ITERS=2 GAP_ITERS=2 \
+  N_MC=4 HORIZON=8 bash scripts/run_tabular.sh
+```
+
+This writes residual plots and the gap-evaluation summary under `runs/smoke/`.
+
 ## Tabular experiments
 
 Run all tabular experiments from the repository root:
